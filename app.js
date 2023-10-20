@@ -4,15 +4,12 @@ const ImmutableStrategy = require('passport-immutable').Strategy;
 
 const app = express();
 
-// Configure Passport with your Immutable credentials
 passport.use(new ImmutableStrategy({
     clientID: 'jGJOOjVhwr969e5GGHHys1gqgzLmFKts',
-    callbackURL: 'http://localhost:3000/auth/passport/callback' // Adjust the callback URL
+    callbackURL: 'http://localhost:3000/auth/passport/callback'
 }, (accessToken, refreshToken, profile, done) => {
     return done(null, profile);
 }));
-
-// Initialize Passport and set up routes
 
 app.use(passport.initialize());
 
@@ -21,7 +18,7 @@ app.get('/logout', (req, res) => {
     // Perform the logout actions, such as destroying the user's session.
     req.logout();
     // Redirect to the specified logout URL.
-    res.redirect('https://google.com/logout'); // Replace with your custom logout URL.
+    res.redirect('https://google.com/logout');
  });
 
  // User logout route
@@ -29,7 +26,7 @@ app.get('/logout', (req, res) => {
     // Perform the logout actions, such as destroying the user's session.
     req.logout();
     // Redirect to the specified logout URL.
-    res.redirect('https://twitter.com/logout'); // Replace with your custom logout URL.
+    res.redirect('https://twitter.com/logout');
  });
 
  // User logout route
@@ -37,7 +34,7 @@ app.get('/logout', (req, res) => {
     // Perform the logout actions, such as destroying the user's session.
     req.logout();
     // Redirect to the specified logout URL.
-    res.redirect('https://facebook.com/logout'); // Replace with your custom logout URL.
+    res.redirect('https://facebook.com/logout');
  });
 
  // User logout route
@@ -45,7 +42,7 @@ app.get('/logout', (req, res) => {
     // Perform the logout actions, such as destroying the user's session.
     req.logout();
     // Redirect to the specified logout URL.
-    res.redirect('https://instagram.com/logout'); // Replace with your custom logout URL.
+    res.redirect('https://instagram.com/logout');
  });
 
 app.get('/', (req, res) => {
