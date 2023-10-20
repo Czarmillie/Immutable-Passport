@@ -41,13 +41,4 @@ Demonstrate how to initiate a transaction from Passport, such as sending a place
 
 ---
 
-**Sample App:** You can find a sample application with Passport integration in the [sample-app](sample-app/) directory of this repository.
-
----
-
-Feel free to modify and expand upon this guide as needed for your specific application.
-
----
-
-**Note:** Make sure to replace `<repository_url>` in the clone command with your actual GitHub repository URL.
-
+**Sample App:** You can find a sample application with Passport integration in the immutable passport repository.
